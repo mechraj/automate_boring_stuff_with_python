@@ -1,7 +1,8 @@
 #Program to understand while loop
 
-name='' #Assigns a variable to empty string 
-while name!='my name':     #initializng while loop
-    print('Enter your name..?')    #Asks user for a name
+while True:              #intializes wile loop whose condition is always true.
+    print('Enter your name.? ') #asks user for his name
     name=input()
-print('Thank you.!')
+    if name=='your name':    #checks the condition
+        break                #breaks out of while loop
+print('Thank you')
