@@ -11,5 +11,5 @@ def bacon():
     print(eggs)  #prints bacon_local
 
 eggs='global'
-spam()
+bacon()
 print(eggs) #prints global
