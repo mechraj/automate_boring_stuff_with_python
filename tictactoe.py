@@ -7,7 +7,7 @@
 
 #Creating a dictionary to represent a tictactoe board
 
-the_board={'top-L':' ','top-M':' ','top-r':' ',
+the_board={'top-L':' ','top-M':' ','top-R':' ',
             'mid-L':' ', 'mid-M':' ', 'mid-R':' ',
             'bot-L':' ', 'bot-M':' ', 'bot-R':' '
             }
@@ -19,3 +19,18 @@ def printboard(board):
     print((board['mid-L'])+' | '+(board['mid-M'])+' | '+ (board['mid-R']))
     print('- + - + -')
     print((board['bot-L'])+' | '+(board['bot-M'])+' | '+ (board['bot-R']))
+
+#creatting a loop for players
+
+turn='X'
+for i in range(9):
+    printboard(the_board)
+    print('Player '+ turn+' make your move')
+    move=input()
+    the_board[move]=turn
+    if turn=='X':
+        turn='0'
+    else:
+        turn='X'
+   
+
