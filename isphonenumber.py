@@ -1,5 +1,11 @@
 #Program checks if the input by the user is a phone mumber with pattern 000-000-0000
 
+#sample text to find the phone number in
+message = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
+#loop through each character in a range of 12 characters
+#if any range of 12 matches the pattern then print it out.
+
+
 #function to check mobile number.
 def is_phone_number(text):
     if len(text)!=12:
@@ -19,7 +25,8 @@ def is_phone_number(text):
             return False
     return True
 
-print('415-555-4242 is a phone number:')
-print(is_phone_number('415-555-4242'))
-print('Moshi moshi is a phone number:')
-print(is_phone_number('Moshi moshi'))
+#looping through the message
+for i in range(len(message)):
+    chunk=message[i:i+12]
+    if is_phone_number(chunk):
+        print('Phone number found: '+ chunk)
